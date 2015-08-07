@@ -24,7 +24,7 @@ public class MergingOfTwoArrayTest {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	//Positive Test
 	@Test
 	public void test() {
 		MergingOfTwoArray object=new MergingOfTwoArray();
@@ -34,7 +34,7 @@ public class MergingOfTwoArrayTest {
 		int output[]={1,2,3,4,5,6,7,8,9,10};
 		assertArrayEquals("Pass", output, object.join(input1, 5, input2, 5, c));
 	}
-
+	//Negative Test
 	@Test
 	public void test1() {
 		MergingOfTwoArray object=new MergingOfTwoArray();

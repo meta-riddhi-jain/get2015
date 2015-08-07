@@ -54,7 +54,7 @@ public class FirstComeFirstServeTest {
 
 		return 1;
 	}
-	
+	//Positive Test
 	@Test
 	public void test() {
 		int expected[][]={{1,0,1,8},{5,3,8,10},{7,3,10,19}};
@@ -65,7 +65,7 @@ public class FirstComeFirstServeTest {
 		assertEquals("Pass", 1, isArrayEquals(expected, output));
 
 	}
-	
+	//Negative Test
 	@Test
 	public void test1() {
 		int expected[][]={{1,0,1,8},{5,3,8,10},{7,3,10,19},{25,0,0,27}};

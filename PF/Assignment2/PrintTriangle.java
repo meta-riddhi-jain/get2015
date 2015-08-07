@@ -9,7 +9,7 @@ public class PrintTriangle {
 		System.out.println("Enter the value of number");
 		int num=sc.nextInt();
 		PrintTriangle object=new PrintTriangle();
-		String output[]=object.wholePyramid(num);
+		String output[]=object.wholeTriangle(num);
 		for(int i=1;i<=num;i++)
 		{
 			System.out.println(output[i]);
@@ -18,7 +18,7 @@ public class PrintTriangle {
 		
 
 	}
-	
+	//function to print spaces in the pattern
 	public String space(int row,int num)
 	{
 		String numSpace=new String();
@@ -30,6 +30,7 @@ public class PrintTriangle {
 		return numSpace;
 	}
 	
+	//function to print the value in the pattern
 	public String number(int row,int num)
 	{
 		String value=new String();
@@ -41,7 +42,8 @@ public class PrintTriangle {
 		return value;
 		}
 	
-	 public String[] wholePyramid(int num)
+	//function to print whole triangle
+	 public String[] wholeTriangle(int num)
 	{
 		Scanner sc=new Scanner(System.in);
 		String result[]=new String[num+1];

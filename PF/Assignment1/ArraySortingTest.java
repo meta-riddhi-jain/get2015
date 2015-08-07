@@ -24,14 +24,14 @@ public class ArraySortingTest {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	//Positive Test
 	@Test
 	public void test() {
 		ArraySorting sa = new ArraySorting();
 		int input[]={23,23,23,21,21};
 		assertEquals("Pass",2,sa.find_order_array(input));
 	}
-	
+	//Negative Test
 	@Test
 	public void test1() {
 		ArraySorting sa = new ArraySorting();

@@ -24,7 +24,7 @@ public class PrintDiamondTest {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	//Positive Test
 	@Test
 	public void test() {
 		PrintDiamond object=new PrintDiamond();
@@ -34,7 +34,7 @@ public class PrintDiamondTest {
 		boolean flag=result.equals(output);
 		assertTrue("Pass", flag);
 	}
-	
+	//Positive Test
 	@Test
 	public void test1()
 	{
@@ -45,6 +45,7 @@ public class PrintDiamondTest {
 		boolean flag=result.equals(output);
 		assertTrue(flag);
 	}
+	//Positive Test
 	@Test
 	public void test2() {
 
@@ -55,6 +56,7 @@ public class PrintDiamondTest {
 		boolean flag=result.equals(output[0]);
 		assertTrue(flag);
 	}
+	//Negative Test
 	@Test
 	public void test3() {
 
@@ -65,7 +67,7 @@ public class PrintDiamondTest {
 		boolean i=result.equals(output[0]);
 		assertTrue(i);
 	}
-	
+	//Negative Test
 	@Test
 	public void test4() {
 		PrintDiamond object=new PrintDiamond();
@@ -75,6 +77,7 @@ public class PrintDiamondTest {
 		boolean flag=result.equals(output);
 		assertTrue("Pass", flag);
 	}
+	//Negative Test
 	@Test
 	public void test5()
 	{

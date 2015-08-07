@@ -24,7 +24,7 @@ public class LongestIncreasingSequenceTest {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	//Positive Test
 	@Test
 	public void test() {
 		LongestIncreasingSequenceOfNumber object=new LongestIncreasingSequenceOfNumber();
@@ -32,7 +32,7 @@ public class LongestIncreasingSequenceTest {
 		int input[]={1,2,3,2,3,4,5,3,4,2,2,3,4,5,6,7,8,1,2,4,5,6,7,8,9};
 		assertArrayEquals(output, object.longestIncreasingSeqeunce(input));
 	}
-
+	//Negative Test
 	@Test
 	public void test1() {
 		LongestIncreasingSequenceOfNumber object=new LongestIncreasingSequenceOfNumber();

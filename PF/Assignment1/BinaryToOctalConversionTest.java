@@ -24,7 +24,7 @@ public class BinaryToOctalConversionTest {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	//Positive Test
 	@Test
 	public void test() {
 
@@ -32,7 +32,7 @@ public class BinaryToOctalConversionTest {
 		int output=bo.convertBinaryToOctal(110101);
 		assertEquals("Right Answer",65,output);
 	}
-
+	//Negative Test
 	@Test
 	public void test1() {
 

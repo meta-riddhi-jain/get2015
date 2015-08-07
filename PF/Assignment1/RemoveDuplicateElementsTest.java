@@ -24,7 +24,7 @@ public class RemoveDuplicateElementsTest {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	//Positive Test
 	@Test
 	public void test() {
 
@@ -33,7 +33,7 @@ public class RemoveDuplicateElementsTest {
 		int output[]={2,0,4,6,3,8,5};
 		assertArrayEquals("Pass",output,object1.removeDuplicateElementsOfArray(input));
 	}
-
+	//Positive Test
 	@Test
 	public void test1() {
 
@@ -42,7 +42,7 @@ public class RemoveDuplicateElementsTest {
 		int output[]={2,3,4,5,6,8,0,9};
 		assertArrayEquals("Pass",output,object1.removeDuplicateElementsOfArray(input));
 	}
-
+	//Negative Test
 	@Test
 	public void test2() {
 		System.out.print("Remove Duplicate Elements in array test");
