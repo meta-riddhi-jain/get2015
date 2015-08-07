@@ -26,6 +26,21 @@ public class FirstComeFirstServeTest {
 	}
 	int isArrayEquals(int expected[][], int output[][])
 	{
+		for(int i=0;i<3;i++)
+		{
+			for(int j=0;j<4;j++)
+			{
+				if(expected[i][j]!=output[i][j])
+				{
+					return 0;
+				}
+			}
+		}
+
+		return 1;
+	}
+	int isArrayEquals2(int expected[][], int output[][])
+	{
 		for(int i=0;i<4;i++)
 		{
 			for(int j=0;j<4;j++)
@@ -36,18 +51,31 @@ public class FirstComeFirstServeTest {
 				}
 			}
 		}
-		
-			return 1;
+
+		return 1;
 	}
+	
 	@Test
 	public void test() {
-		int expected[][]={{1,0,1,12},{5,8,13,19},{9,11,20,21},{25,0,25,29}};
-		int arrival_time[]={1,5,9,25};
-		int job_size[]={12,7,2,5};
+		int expected[][]={{1,0,1,8},{5,3,8,10},{7,3,10,19}};
+		int arrival_time[]={1,5,7};
+		int job_size[]={7,2,9};
 		FirstComeFirstServe object=new FirstComeFirstServe();
 		int output[][]=object.FCFS(arrival_time, job_size);
 		assertEquals("Pass", 1, isArrayEquals(expected, output));
-		
+
 	}
+	
+	@Test
+	public void test1() {
+		int expected[][]={{1,0,1,8},{5,3,8,10},{7,3,10,19},{25,0,0,27}};
+		int arrival_time[]={1,5,7,25};
+		int job_size[]={7,2,9,2};
+		FirstComeFirstServe object=new FirstComeFirstServe();
+		int output[][]=object.FCFS(arrival_time, job_size);
+		assertEquals("Pass", 1, isArrayEquals2(expected, output));
+
+	}
+
 
 }

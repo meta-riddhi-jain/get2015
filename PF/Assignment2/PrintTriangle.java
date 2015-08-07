@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
 
-public class Pattern2 {
+public class PrintTriangle {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the value of n");
-		int n=sc.nextInt();
-		Pattern2 object=new Pattern2();
-		String output[]=object.wholePyramid(n);
-		for(int i=1;i<=n;i++)
+		System.out.println("Enter the value of number");
+		int num=sc.nextInt();
+		PrintTriangle object=new PrintTriangle();
+		String output[]=object.wholePyramid(num);
+		for(int i=1;i<=num;i++)
 		{
 			System.out.println(output[i]);
 			
@@ -19,7 +19,7 @@ public class Pattern2 {
 
 	}
 	
-	String space(int row,int n)
+	public String space(int row,int num)
 	{
 		String numSpace=new String();
 		
@@ -30,10 +30,10 @@ public class Pattern2 {
 		return numSpace;
 	}
 	
-	String number(int row,int n)
+	public String number(int row,int num)
 	{
 		String value=new String();
-		for(int i=1;i<=n-row+1;i++)
+		for(int i=1;i<=num-row+1;i++)
 		{
 			value=value+i;
 		}
@@ -41,15 +41,13 @@ public class Pattern2 {
 		return value;
 		}
 	
-	String[] wholePyramid(int n)
+	 public String[] wholePyramid(int num)
 	{
 		Scanner sc=new Scanner(System.in);
-	
-		Pattern2 object1=new Pattern2();
-		String result[]=new String[n+1];
-		for(int i=1;i<=n;i++)
+		String result[]=new String[num+1];
+		for(int i=1;i<=num;i++)
 		{
-			result[i]=(object1.space(i, n)+object1.number(i, n));
+			result[i]=(space(i, num)+number(i, num));
 			
 		}
 		return result;

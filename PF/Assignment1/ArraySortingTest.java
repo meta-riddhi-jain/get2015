@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class LongestSequenceTest {
+public class ArraySortingTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -27,10 +27,15 @@ public class LongestSequenceTest {
 
 	@Test
 	public void test() {
-		LongestSequence object=new LongestSequence();
-		int output[]={1,2,4,5,6,7,8,9};
-		int input[]={1,2,3,2,3,4,5,3,4,2,2,3,4,5,6,7,8,1,2,4,5,6,7,8,9};
-		assertArrayEquals(output, object.longIncrSeq(input));
+		ArraySorting sa = new ArraySorting();
+		int input[]={23,23,23,21,21};
+		assertEquals("Pass",2,sa.find_order_array(input));
 	}
-
+	
+	@Test
+	public void test1() {
+		ArraySorting sa = new ArraySorting();
+		int input[]={21,23,23,21,21};
+		assertEquals("Pass",2,sa.find_order_array(input));
+	}
 }

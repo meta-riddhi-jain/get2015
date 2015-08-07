@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class Pattern1Test {
+public class PatternTriangleTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -27,50 +27,43 @@ public class Pattern1Test {
 
 	@Test
 	public void test() {
-		int t=0;
-		Pattern1 object=new Pattern1();
+		PrintTriangle object=new PrintTriangle();
 		int n=5,row=1;
 		String output=object.space(row, n);
-		String result="     ";
+		String result="";
 		boolean i=result.equals(output);
-		System.out.println(i);
-		if(i==true)
-		{
-			t=1;
-		}
-		assertEquals("Pass", 1,t);
+		assertTrue(i);
 	}
 	
 	@Test
 	public void test1()
 	{
 		int t=0;
-		Pattern1 object=new Pattern1();
+		PrintTriangle object=new PrintTriangle();
 		int n=5,row=1;
 		String output=object.number(row, n);
-		String result="1";
+		String result="12345";
 		boolean i=result.equals(output);
-		System.out.println(i);
 		if(i==true)
 		{
 			t=1;
 		}
 		assertEquals("Pass", 1,t);
 	}
+
 	@Test
 	public void test2() {
 		int t=0;
-		Pattern1 object=new Pattern1();
+		PrintTriangle object=new PrintTriangle();
 		int n=5;
 		String output[]=object.wholePyramid(n);
-		String result="     1";
-		boolean i=result.equals(output[0]);
-		System.out.println(i);
-		System.out.println(output[0]);
+		String result="12345";
+		boolean i=result.equals(output[1]);
 		if(i==true)
 		{
 			t=1;
 		}
 		assertEquals("Pass", 1,t);
 	}
+
 }

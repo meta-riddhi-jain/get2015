@@ -5,9 +5,9 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.*;
 
-
-public class RemoveDuplicateTest {
+public class BinaryToOctalConversionTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -27,11 +27,18 @@ public class RemoveDuplicateTest {
 
 	@Test
 	public void test() {
-		System.out.print("Remove Duplicate Elements in array test");
-		RemoveDuplicate object1=new RemoveDuplicate();
-		int input[]={2,5,4,6,3,8,5,2,3,3,6,3,2,0};
-		int output[]={2,5,4,6,3,8,0};
-		assertArrayEquals("Pass",output,object1.removeDuplicate(input));
+
+		BinaryToOctalConversion bo=new BinaryToOctalConversion();
+		int output=bo.convertBinaryToOctal(110101);
+		assertEquals("Right Answer",65,output);
+	}
+
+	@Test
+	public void test1() {
+
+		BinaryToOctalConversion bo=new BinaryToOctalConversion();
+		int output=bo.convertBinaryToOctal(110111);
+		assertEquals("Right Answer",65,output);
 	}
 
 }
