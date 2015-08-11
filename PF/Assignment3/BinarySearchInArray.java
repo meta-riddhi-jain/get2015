@@ -46,10 +46,6 @@ public class BinarySearchInArray {
 
 	public int binarySearch(int array[],int lowerBound,int upperBound,int num)
 	{
-		if(array.length==0)
-		{
-			throw new ArrayIndexOutOfBoundsException();
-		}
 		int mid=(lowerBound+upperBound)/2;
 		if(lowerBound <= upperBound)
 		{

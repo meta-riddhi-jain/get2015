@@ -35,24 +35,17 @@ public class QuickSortAlgorithmTest {
 		assertArrayEquals(expected_output, actual_output);
 	}
 
-	//Negative Test Case
+	//Positive Test Case
 	@Test
 	public void test1() {
 		QuickSortAlgorithm object=new QuickSortAlgorithm();
 		int array[]={2,5,3,10,4,6};
-		int expected_output[]={2,3,6,5,4,10};
+		int expected_output[]={2,3,4,5,6,10};
 		int actual_output[]=object.quickSort(array, 0, array.length-1);
 		assertArrayEquals(expected_output, actual_output);
+
 	}
 
-	//Error Test Case
-	@Test
-	public void test2() {
-		QuickSortAlgorithm object=new QuickSortAlgorithm();
-		int array[]={};
-		int expected_output[]={};
-		int actual_output[]=object.quickSort(array, 0, array.length-1);
-		assertArrayEquals(expected_output, actual_output);
-	}
+
 
 }

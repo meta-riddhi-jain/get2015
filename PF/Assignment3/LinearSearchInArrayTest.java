@@ -43,14 +43,6 @@ public class LinearSearchInArrayTest {
 		assertEquals("Pass",6,actual_output);
 	}
 
-	//Error Test Case
-	@Test
-	public void test2() {
-		LinearSearchInArray object=new LinearSearchInArray();
-		int array[]={};
-		int actual_output=object.linearSearch(array, 0, 77);
-		assertEquals("Pass",-1,actual_output);
-	}
 
 	//Negative Test Case
 	@Test
@@ -58,6 +50,6 @@ public class LinearSearchInArrayTest {
 		LinearSearchInArray object=new LinearSearchInArray();
 		int array[]={2,4,1,5,66};
 		int actual_output=object.linearSearch(array, 0, 77);
-		assertEquals("Pass",2,actual_output);
+		assertNotEquals("Pass",2,actual_output);
 	}
 }

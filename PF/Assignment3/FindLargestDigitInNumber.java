@@ -7,24 +7,34 @@ public class FindLargestDigitInNumber {
 	public static void main(String args[])
 	{
 		Scanner sc=new Scanner(System.in);
+		int y;
+		do
+		{
+			y=0;
+		int number;
 		try
 		{
+			do
+			{
 			System.out.println("Enter the number");
-			int number=sc.nextInt();
+			number=sc.nextInt();
 			//Exiting system if the value entered by user is negative
 			if(number<0)
 			{
 				System.out.println("Negative Number not allowed");
-				System.exit(0);
 			}
+			}while(number<0);
 			FindLargestDigitInNumber object=new FindLargestDigitInNumber();
 			int final_output=object.largestDigit(number);
-			System.out.println(final_output);
+			System.out.println("Largest digit in the number is"+final_output);
 		}
 		catch(Exception e)    //Catch the exception raised if user enters value other than integer.
 		{
 			System.out.println("Enter a valid integer input");
 		}
+		System.out.println("Press one to continue,Else Zero to exit");
+		y=sc.nextInt();
+		}while(y==1);
 	}
 
 	public int largestDigit(int number)

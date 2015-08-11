@@ -30,7 +30,7 @@ public class BinarySearchInArrayTest {
 	public void test() {
 		BinarySearchInArray object=new BinarySearchInArray();
 		int array[]={1,2,3,4,5};
-		int actual_output=object.binarySearch(array,0,5,2);
+		int actual_output=object.binarySearch(array,0,array.length-1,2);
 		assertEquals("Pass",1,actual_output);
 	}
 
@@ -49,16 +49,17 @@ public class BinarySearchInArrayTest {
 		BinarySearchInArray object=new BinarySearchInArray();
 		int array[]={2,5,8,9,10,77,55};
 		int actual_output=object.binarySearch(array,0,array.length-1,88);
-		assertEquals("Pass",8,actual_output);
+		assertNotEquals("Pass",8,actual_output);
 	}
 
-	//Negative Test Case
+	//Positive Test Case
 	@Test
 	public void test3() {
 		BinarySearchInArray object=new BinarySearchInArray();
 		int array[]={};
 		int actual_output=object.binarySearch(array,0,array.length-1,88);
 		assertEquals("Pass",-1,actual_output);
+
 	}
 
 

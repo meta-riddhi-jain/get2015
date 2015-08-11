@@ -8,38 +8,46 @@ public class QuickSortAlgorithm {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
-		try
+		int y;
+		do                                //do while loop to perform Quick Sort again.
 		{
-			System.out.println("Enter the size of array");
-			int size=sc.nextInt();
-			if(size==0)
+			y=0;
+			try
 			{
-				throw new ArrayIndexOutOfBoundsException();
-			}
-			int array[]=new int[size];
-			int index;               //Initializing index to the start of an array.
-			System.out.println("Enter the value of array");
-			for(index=0;index<size;index++)
-			{
-				array[index]=sc.nextInt();
-			}
-			QuickSortAlgorithm object=new QuickSortAlgorithm();
-			int output[]=object.quickSort(array, 0, size-1);
-			System.out.println("Sorted array is :");
-			for(index=0;index<size;index++)
-			{
-				System.out.print(output[index]+" ");
-			}
-		}
-		catch(ArrayIndexOutOfBoundsException e)         //Catch the Exception if user enters the size of array 0.
-		{
-			System.out.println("Enter proper array size value");
-		}
-		catch(Exception e)                             //Catch the exception raised if user enters value other than integer.
-		{
-			System.out.println("Enter valid integer value");
-		}
+				System.out.println("Enter the size of array");
+				int size=sc.nextInt();
+				if(size==0)
+				{
+					throw new ArrayIndexOutOfBoundsException();
+				}
+				int array[]=new int[size];
+				int index;               //Initializing index to the start of an array.
+				System.out.println("Enter the value of array");
+				for(index=0;index<size;index++)
+				{
+					array[index]=sc.nextInt();
+				}
+				QuickSortAlgorithm object=new QuickSortAlgorithm();
+				int output[]=object.quickSort(array, 0, size-1);
+				System.out.println("Sorted array is :");
+				for(index=0;index<size;index++)
+				{
+					System.out.print(output[index]+" ");
 
+				}
+				System.out.println();
+			}
+			catch(ArrayIndexOutOfBoundsException e)         //Catch the Exception if user enters the size of array 0.
+			{
+				System.out.println("Enter proper array size value");
+			}
+			catch(Exception e)                             //Catch the exception raised if user enters value other than integer.
+			{
+				System.out.println("Enter valid integer value");
+			}
+			System.out.println("Press one to continue,Else Zero to exit");
+			y=sc.nextInt();
+		}while(y==1);              //If you want to continue than press 1, else 0.
 
 	}
 

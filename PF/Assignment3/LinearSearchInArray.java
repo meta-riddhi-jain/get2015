@@ -7,6 +7,10 @@ public class LinearSearchInArray {
 		// TODO Auto-generated method stub
 
 		Scanner sc=new Scanner(System.in);
+		int y;
+		do
+		{
+			y=0;
 		try
 		{		
 			System.out.println("Enter the size of array");
@@ -44,6 +48,9 @@ public class LinearSearchInArray {
 		{
 			System.out.println("Enter valid integer value");
 		}
+		System.out.println("Press one to continue,Else Zero to exit");
+		y=sc.nextInt();
+		}while(y==1);
 	}
 
 	public int linearSearch(int array[],int lowerBound, int searchValue){

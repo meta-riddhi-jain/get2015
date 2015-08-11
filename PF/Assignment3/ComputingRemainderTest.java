@@ -45,15 +45,7 @@ public class ComputingRemainderTest {
 		assertEquals("Pass",1,remainder);
 	}
 
-	//Error Test Case
-	@Test
-	public void test2() {
-		ComputingRemainder object=new ComputingRemainder();
-		int divisor=2;
-		int divident=0;
-		int remainder=object.remainder(divisor, divident);
-		assertEquals("Pass",1,remainder);
-	}
+
 
 	//Negative Test Case
 	@Test
@@ -62,7 +54,7 @@ public class ComputingRemainderTest {
 		int divisor=27;
 		int divident=5;
 		int remainder=object.remainder(divisor, divident);
-		assertEquals("Pass",1,remainder);
+		assertNotEquals("Pass",1,remainder);
 	}
 
 

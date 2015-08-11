@@ -50,16 +50,16 @@ public class ComputeGreatestCommonDivisorTest {
 	@Test
 	public void test3() {
 		ComputeGreatestCommonDivisor object=new ComputeGreatestCommonDivisor();
-		int actual_output=object.gcd(-1,-2);
-		assertEquals("Pass",-1,actual_output);
+		int actual_output=object.gcd(12,4);
+		assertNotEquals("Pass",2,actual_output);
 	}
 
 	//Negative Test Case
 	@Test
 	public void test5() {
 		ComputeGreatestCommonDivisor object=new ComputeGreatestCommonDivisor();
-		int actual_output=object.gcd(0,3);
-		assertEquals("Pass",3,actual_output);
+		int actual_output=object.gcd(97,3);
+		assertNotEquals("Pass",3,actual_output);
 	}
 
 }

@@ -50,7 +50,7 @@ public class FindLargestDigitInNumberTest {
 	public void test3() {
 		FindLargestDigitInNumber object=new FindLargestDigitInNumber();
 		int actual_output=object.largestDigit(-444);
-		assertEquals("Pass",4,actual_output);
+		assertNotEquals("Pass",4,actual_output);
 	}
 
 
