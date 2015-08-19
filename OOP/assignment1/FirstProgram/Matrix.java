@@ -45,27 +45,39 @@ public class Matrix {
 	//Function to calculate the transpose of the matrix 
 	public Matrix transpose()
 	{
-		int transpose[][]=new int[noRows][noColumns];
-		for(int index=0;index<noRows;index++)
+		int index,index2;
+		Matrix transposeObject;
+
+		if(noRows==noColumns)
 		{
-			for(int index2=0;index2<noColumns;index2++)
+			for( index=1;index<noRows;index++)
 			{
-				//changing the row and column value to change the location of the integer value
-				transpose[index2][index]=data[index][index2];
+				for(index2=0;index2<index;index2++)
+				{
+					if(index!=index2)    //if value of rows and column are same than transpose is obtained by swapping values 
+					{
+						int temp=data[index][index2];
+						data[index][index2]=data[index2][index];
+						data[index2][index]=temp;
+					}
+				}
+			}
+			return this;
+		}
+		else
+		{
+			transposeObject=new Matrix(this.noColumns,this.noRows);
+			for(index=0;index<noRows;index++)
+			{
+				for(index2=0;index2<noColumns;index2++)
+				{
+					//changing the row and column value to change the location of the integer value
+					transposeObject.data[index2][index]=data[index][index2];
+				}
 			}
 		}
-		for(int index=0;index<noRows;index++)
-		{
-			for(int index2=0;index2<noColumns;index2++)
-			{
-				//storing the transposed datda once again in the original matrix or 2D array initialized
-				data[index][index2]=transpose[index][index2];
-			}
-		}
-		return this;
+		return transposeObject;
 	}
-
-
 	public static void main(String args[])
 	{
 		Scanner sc=new Scanner(System.in);
@@ -78,13 +90,16 @@ public class Matrix {
 				System.out.println("Enter the number of rows");
 				noRows=sc.nextInt();
 			}while(noRows<=0);
+			
 			do
 			{
 				System.out.println("Enter the number of columns");
 				noColumns=sc.nextInt();
 			}while(noColumns<=0);
+			
 			Matrix object=new Matrix(noRows,noColumns);
 			System.out.println("Enter elements in the matrix :");
+			
 			for(int index=0;index<noRows;index++)
 			{
 				for(int index2=0;index2<noColumns;index2++)
@@ -95,12 +110,17 @@ public class Matrix {
 			}
 			System.out.println("Elements entered in the matrix are :");
 			object.show();
+			
 			Matrix object2=object.transpose();
 			System.out.println("Transpose of a matrix is :");
-			object2.show();
+			object2.show();         //shows the matrix
+			
 		}catch(Exception e)
 		{
 			System.out.println("Sorry! Enter a valid integer value");
 		}
 	}
+
+
 }
+
