@@ -55,13 +55,6 @@ public class Student extends Person{
 	}
 	
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method student
-		Student object1=new Student(1, "Rajat", 23);
-		String array[]={"Engish","Maths",""};
-		object1.setCourses(array);
-		String answer=object1.toString();
-		System.out.println(answer);
-	}
+
 
 }
