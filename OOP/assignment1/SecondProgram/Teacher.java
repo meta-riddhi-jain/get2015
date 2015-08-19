@@ -54,13 +54,6 @@ public class Teacher extends Person {
 		}
 		return super.toString()+"\nTeacherId :"+teacherId+"\nCourses :"+totalSubjects;
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Teacher object1=new Teacher(1, "Rajat", 23);
-		String array[]={"Engish","Maths"};
-		object1.setSubjects(array);
-		String answer=object1.toString();
-		System.out.println(answer);
-	}
+
 
 }
